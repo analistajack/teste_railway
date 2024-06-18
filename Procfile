@@ -1,2 +1,3 @@
-web: gunicorn app:app
-worker: rq worker --with-scheduler
+#!/bin/bash
+gunicorn app:app --daemon
+rq worker --with-scheduler
